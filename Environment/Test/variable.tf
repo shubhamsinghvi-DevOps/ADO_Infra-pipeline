@@ -1,0 +1,1 @@
+variable "test_rg_module" {}
