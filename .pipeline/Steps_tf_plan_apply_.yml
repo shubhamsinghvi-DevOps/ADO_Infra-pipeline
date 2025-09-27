@@ -5,6 +5,7 @@ trigger: none
 steps: 
 
 - task: TerraformTask@5
+  displayName: Terraform Init
   inputs:
     provider: 'azurerm'
     command: 'init'
@@ -16,6 +17,7 @@ steps:
     backendAzureRmKey: 'terraform.tfstate'
 
 - task: TerraformTask@5
+  displayName: Terraform plan
   inputs:
     provider: 'azurerm'
     command: 'plan'
