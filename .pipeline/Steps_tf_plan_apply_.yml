@@ -1,0 +1,9 @@
+pool: ADO_Github_Infra
+
+trigger: none
+
+steps: 
+- script: echo "I am Shubham Singhvi"
+  displayName: "Initaial Step"
+
+
