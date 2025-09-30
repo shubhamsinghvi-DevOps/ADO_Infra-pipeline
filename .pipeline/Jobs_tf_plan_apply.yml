@@ -58,7 +58,7 @@ jobs:
     inputs:
       provider: 'azurerm'
       command: 'apply'
-      ommandOptions: '-auto-approve'
+      commandOptions: '-auto-approve'
       environmentServiceNameAzureRM: 'ADO_Infra'
 
 
