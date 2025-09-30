@@ -54,10 +54,11 @@ jobs:
       backendAzureRmKey: 'terraform.tfstate'
 
   - task: TerraformTask@5    
-    displayName: Terraform Init  
+    displayName: Terraform apply  
     inputs:
       provider: 'azurerm'
       command: 'apply'
+      ommandOptions: '-auto-approve'
       environmentServiceNameAzureRM: 'ADO_Infra'
 
 
