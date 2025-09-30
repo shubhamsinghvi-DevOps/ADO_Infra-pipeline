@@ -35,4 +35,32 @@ jobs:
       notifyUsers: 'shubhamsinghvi8696@gmail.com'
       instructions: 'PLease validate Terraform plan'
 
-      
+- job: TwrraformApply
+  dependsOn: ManualValidation
+  displayName: Terraform apply
+  steps:       
+  - task: TerraformTask@5
+    displayName: Terraform Init
+    inputs:
+
+      provider: 'azurerm'
+      command: 'init'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/Test'
+      commandOptions: '-upgrade'
+      backendServiceArm: 'ADO_Infra'
+      backendAzureRmResourceGroupName: 'RG_Practice1'
+      backendAzureRmStorageAccountName: 'shubhamsinghvi403424'
+      backendAzureRmContainerName: 'adocontainer'
+      backendAzureRmKey: 'terraform.tfstate'
+
+  - task: TerraformTask@5    
+    displayName: Terraform Init  
+    inputs:
+      provider: 'azurerm'
+      command: 'apply'
+      environmentServiceNameAzureRM: 'ADO_Infra'
+
+
+
+
+  
