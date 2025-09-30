@@ -1,10 +1,10 @@
 test_rg_module = {
     resource_group1 = {
-        name = "ShubhamRGGithub"
+        name = "ShubhamRGGithub2"
         location = "Westus"
     }
         resource_group2 = {
-        name = "ShubhamRGGithub1"
+        name = "ShubhamRGGithub12"
         location = "Eastus"
     }
 }
