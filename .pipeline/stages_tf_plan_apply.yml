@@ -1,0 +1,9 @@
+pool: ADO_Github_Infra
+trigger: none 
+
+stages:
+- stage: 
+  displayName: Terraform Init Plan
+  jobs:
+  - job: Terraform init and plan
+    displayName: 
