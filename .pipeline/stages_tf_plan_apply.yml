@@ -6,6 +6,7 @@ stages:
 - stage: TerraformInitplan
   displayName: Terraform Init and Plan
   jobs:
+
   - job: TerraformInitplan
     displayName: Terraform Init Plan
     steps:
@@ -14,6 +15,8 @@ stages:
       inputs:
         version: 'v1.26.0'
         dir: 'System.DefaultWorkingDirectory)/Environment/Test'
+  
+  
     - task: TerraformTask@5
       inputs:
         provider: 'azurerm'
