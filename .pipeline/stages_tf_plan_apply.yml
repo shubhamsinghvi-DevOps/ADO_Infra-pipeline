@@ -27,6 +27,29 @@ stages:
         workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/Test'
         environmentServiceNameAzureRM: 'ADO_Infra'
     
+- stage: TerraformInitapply
+  displayName: Terraform Init and Apply
+  jobs:
+  - job: TerraformInitplan
+    displayName: Terraform Init Plan
+    steps:
+    - task: TerraformTask@5
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/Test'
+        backendServiceArm: 'ADO_Infra'
+        backendAzureRmResourceGroupName: 'RG_Practice1'
+        backendAzureRmStorageAccountName: 'shubhamsinghvi403424'
+        backendAzureRmContainerName: 'adocontainer'
+        backendAzureRmKey: 'terraform.tfstate'
+
+    - task: TerraformTask@5
+      inputs:
+        provider: 'azurerm'
+        command: 'plan'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/Test'
+        environmentServiceNameAzureRM: 'ADO_Infra'
 
 # - stage: TerraformInitApply
 #   displayName: Terraform Init and Plan
