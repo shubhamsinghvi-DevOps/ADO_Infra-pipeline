@@ -12,7 +12,7 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/Test'
     backendServiceArm: 'ADO_Infra'
     backendAzureRmResourceGroupName: 'RG_Practice1'
-    backendAzureRmStorageAccountName: 'shubhamsinghvi403424'
+    backendAzureRmStorageAccountName: 'shubhamsinghvi4034241'
     backendAzureRmContainerName: 'adocontainer'
     backendAzureRmKey: 'terraform.tfstate'
 
