@@ -22,7 +22,7 @@ stages:
         workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/Test'
         backendServiceArm: 'Azure_Github_Resources'
         backendAzureRmResourceGroupName: 'RG_Practice1'
-        backendAzureRmStorageAccountName: 'shubhamsinghvi403424'
+        backendAzureRmStorageAccountName: 'shubhamsinghvi4034241'
         backendAzureRmContainerName: 'adocontainer'
         backendAzureRmKey: 'terraform.tfstate'
 
@@ -60,7 +60,7 @@ stages:
         commandOptions: '-upgrade'
         backendServiceArm: 'Azure_Github_Resources'
         backendAzureRmResourceGroupName: 'RG_Practice1'
-        backendAzureRmStorageAccountName: 'shubhamsinghvi403424'
+        backendAzureRmStorageAccountName: 'shubhamsinghvi4034241'
         backendAzureRmContainerName: 'adocontainer'
         backendAzureRmKey: 'terraform.tfstate'
 
