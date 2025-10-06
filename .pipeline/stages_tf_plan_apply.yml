@@ -31,7 +31,7 @@ stages:
         provider: 'azurerm'
         command: 'plan'
         workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/Test'
-        environmentServiceNameAzureRM: 'ADO_Infra'
+        environmentServiceNameAzureRM: 'Azure_Github_Resources'
     
 - stage: TerraformInitapply
   dependsOn: TerraformInitplan
@@ -69,4 +69,4 @@ stages:
         provider: 'azurerm'
         command: 'apply'
         workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/Test'
-        environmentServiceNameAzureRM: 'ADO_Infra'
+        environmentServiceNameAzureRM: 'Azure_Github_Resources'
