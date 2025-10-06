@@ -23,7 +23,7 @@ stages:
         backendServiceArm: 'Azure_Github_Resources'
         backendAzureRmResourceGroupName: 'RG_Practice1'
         backendAzureRmStorageAccountName: 'shubhamsinghvi40342411'
-        backendAzureRmContainerName: 'adocontainer1'
+        backendAzureRmContainerName: 'finaltest'
         backendAzureRmKey: 'terraform.tfstate'
 
     - task: TerraformTask@5
@@ -61,7 +61,7 @@ stages:
         backendServiceArm: 'Azure_Github_Resources'
         backendAzureRmResourceGroupName: 'RG_Practice1'
         backendAzureRmStorageAccountName: 'shubhamsinghvi40342411'
-        backendAzureRmContainerName: 'adocontainer1'
+        backendAzureRmContainerName: 'finaltest'
         backendAzureRmKey: 'terraform.tfstate'
 
     - task: TerraformTask@5
