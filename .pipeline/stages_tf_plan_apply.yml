@@ -20,10 +20,12 @@ stages:
         provider: 'azurerm'
         command: 'init'
         workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/Test'
+        backendAzureRmUseEntraIdForAuthentication: false
         backendServiceArm: 'Azure_Github_Resources'
+        backendAzureRmOverrideSubscriptionID: '6b38de24-6577-4220-8a9e-3ddcaa335ffc'
         backendAzureRmResourceGroupName: 'RG_Practice1'
         backendAzureRmStorageAccountName: 'shubhamsinghvi40342411'
-        backendAzureRmContainerName: 'finalcontainer'
+        backendAzureRmContainerName: 'finaltest'
         backendAzureRmKey: 'terraform.tfstate'
 
     - task: TerraformTask@5
@@ -53,15 +55,16 @@ stages:
     - task: TerraformTask@5
       displayName: Terraform Init
       inputs:
-
         provider: 'azurerm'
         command: 'init'
         workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/Test'
         commandOptions: '-upgrade'
+        backendAzureRmUseEntraIdForAuthentication: false
         backendServiceArm: 'Azure_Github_Resources'
+        backendAzureRmOverrideSubscriptionID: '6b38de24-6577-4220-8a9e-3ddcaa335ffc'
         backendAzureRmResourceGroupName: 'RG_Practice1'
         backendAzureRmStorageAccountName: 'shubhamsinghvi40342411'
-        backendAzureRmContainerName: 'finalcontainer'
+        backendAzureRmContainerName: 'finaltest'
         backendAzureRmKey: 'terraform.tfstate'
 
     - task: TerraformTask@5
