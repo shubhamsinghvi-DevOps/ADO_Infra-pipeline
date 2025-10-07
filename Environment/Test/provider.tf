@@ -6,10 +6,10 @@ terraform {
     }
   }
    backend "azurerm" {
-    resource_group_name = ""
-    storage_account_name = ""
-    container_name = ""
-    key = ""
+    resource_group_name = "RG_Practice1"
+    storage_account_name = "shubhamsinghvi40342411 "
+    container_name = "finalcontainer"
+    key = "terraform.tfstate"
     
   }
 }
