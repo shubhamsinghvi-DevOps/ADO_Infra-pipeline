@@ -6,7 +6,7 @@ stages:
 - stage: TerraformInitplan
   displayName: Terraform Init and Plan
   jobs:
-  - job: TerraformInitplan
+  - job: Terraform_Init_plan
     displayName: Terraform Init Plan
     steps:
     
@@ -23,7 +23,7 @@ stages:
         backendServiceArm: 'Azure_Github_Resources'
         backendAzureRmResourceGroupName: 'RG_Practice1'
         backendAzureRmStorageAccountName: 'shubhamsinghvi40342411'
-        backendAzureRmContainerName: 'finaltest'
+        backendAzureRmContainerName: 'finalcontainer'
         backendAzureRmKey: 'terraform.tfstate'
 
     - task: TerraformTask@5
@@ -47,7 +47,7 @@ stages:
         instructions: 'PLease validate Terraform plan'
 
   - job: TwrraformApply
-    dependsOn: ManualValidation
+    #dependsOn: ManualValidation
     displayName: Terraform apply
     steps:       
     - task: TerraformTask@5
@@ -61,7 +61,7 @@ stages:
         backendServiceArm: 'Azure_Github_Resources'
         backendAzureRmResourceGroupName: 'RG_Practice1'
         backendAzureRmStorageAccountName: 'shubhamsinghvi40342411'
-        backendAzureRmContainerName: 'finaltest'
+        backendAzureRmContainerName: 'finalcontainer'
         backendAzureRmKey: 'terraform.tfstate'
 
     - task: TerraformTask@5
