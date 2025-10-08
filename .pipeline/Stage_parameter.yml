@@ -31,7 +31,7 @@ stages:
         backendAzureRmResourceGroupName: 'RG_Practice1'
         backendAzureRmStorageAccountName: 'shubhamsinghvi40342411'
         backendAzureRmContainerName: 'finaltest'
-        backendAzureRmKey: '${{parameters.env}}terraform.tfstate'
+        backendAzureRmKey: '${{parameters.env}}.terraform.tfstate'
 
     - task: TerraformTask@5
       inputs:
@@ -71,7 +71,7 @@ stages:
         backendAzureRmResourceGroupName: 'RG_Practice1'
         backendAzureRmStorageAccountName: 'shubhamsinghvi40342411'
         backendAzureRmContainerName: 'finaltest'
-        backendAzureRmKey: '${{parameters.env}}terraform.tfstate'
+        backendAzureRmKey: '${{parameters.env}}.terraform.tfstate'
 
     - task: TerraformTask@5
       inputs:
