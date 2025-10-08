@@ -15,7 +15,7 @@ pool: ADO_Github_Infra
 trigger:
 - main
 
-stage:
+stages:
 - template: template.yaml
   parameters: 
     env: dev
