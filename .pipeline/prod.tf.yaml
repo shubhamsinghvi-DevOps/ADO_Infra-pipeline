@@ -50,7 +50,7 @@ stages:
   
   jobs:
   - job: ManualValidation
-    displayName: Validation Befor apply
+    displayName: Validation Before apply
     pool: server
     steps: 
     - task: ManualValidation@1
@@ -58,8 +58,8 @@ stages:
         notifyUsers: 'shubhamsinghvi8696@gmail.com'
         instructions: 'PLease validate Terraform plan'
 
-  - job: TwrraformApply
-    #dependsOn: ManualValidation
+  - job: TerraformApply
+    dependsOn: ManualValidation
     displayName: Terraform apply
     steps:       
     - task: TerraformTask@5
