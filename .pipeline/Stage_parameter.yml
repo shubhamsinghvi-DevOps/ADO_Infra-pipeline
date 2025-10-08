@@ -78,4 +78,5 @@ stages:
         provider: 'azurerm'
         command: 'apply'
         workingDirectory: '$(WORK_DIR)'
+        commandOptions: '--var-file=${{parameters.env}}.terraform.tfvars'
         environmentServiceNameAzureRM: 'Azure_Github_Resources'
