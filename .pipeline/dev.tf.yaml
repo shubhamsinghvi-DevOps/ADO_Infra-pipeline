@@ -46,6 +46,8 @@ stages:
 - stage: TerraformInitapply
   dependsOn: TerraformInitplan
   displayName: Terraform Init and Apply
+  condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'main'))
+  
   jobs:
   - job: ManualValidation
     displayName: Validation Befor apply
@@ -57,7 +59,7 @@ stages:
         instructions: 'PLease validate Terraform plan'
 
   - job: TwrraformApply
-    #dependsOn: ManualValidation
+    dependsOn: ManualValidation
     displayName: Terraform apply
     steps:       
     - task: TerraformTask@5

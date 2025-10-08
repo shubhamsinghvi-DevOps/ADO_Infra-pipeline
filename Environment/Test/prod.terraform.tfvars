@@ -3,4 +3,9 @@ test_rg_module = {
         name = "ShubhamRGGithub_prod"
         location = "Westus"
     }
+
+       resource_group2 = {
+        name = "ShubhamRGGithub_prod2"
+        location = "Eastus"
+    }
 }
