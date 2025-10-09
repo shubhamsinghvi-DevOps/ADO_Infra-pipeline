@@ -1,5 +1,8 @@
+#junitxml --output-file-path $(System.DefaultWorkingDirectory)/result.xml'
+
 parameters:
 - name: env 
+
 
 stages: 
 - stage: TerraformInitplan
@@ -11,13 +14,13 @@ stages:
 
       - task: CmdLine@2
         inputs:
-          script: 'checkov -d . -o junitxml --output-file-path $(System.DefaultWorkingDirectory)/result.xml'
+          script: 'checkov -d . -o cli'
           workingDirectory: '$(System.DefaultWorkingDirectory)/Module/2_storage_account'
     
-      - task: PublishTestResults@2
-        inputs:
-          testResultsFormat: 'JUnit'
-          testResultsFiles: 'result.xml'    
+      # - task: PublishTestResults@2
+      #   inputs:
+      #     testResultsFormat: 'JUnit'
+      #     testResultsFiles: 'result.xml'    
 
 #     - task: TerraformTask@5
 #       inputs:
