@@ -4,20 +4,21 @@ parameters:
 stages: 
 - stage: TerraformInitplan
   displayName: Terraform Init and Plan
-  jobs:
-    - task: CmdLine@2
-      inputs:
-        script: 'checkov -d . -o junitxml --output-file-path $(System.DefaultWorkingDirectory)/result.xml'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/Module/2_storage_account'
+  jobs:  
+   - job: Terraform_Init_plan
+     displayName: Terraform Init Plan
+     steps:
+
+      - task: CmdLine@2
+        inputs:
+          script: 'checkov -d . -o junitxml --output-file-path $(System.DefaultWorkingDirectory)/result.xml'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/Module/2_storage_account'
     
-    - task: PublishTestResults@2
-      inputs:
-        testResultsFormat: 'JUnit'
-        testResultsFiles: 'result.xml'    
-  
-#   - job: Terraform_Init_plan
-#     displayName: Terraform Init Plan
-#     steps:
+      - task: PublishTestResults@2
+        inputs:
+          testResultsFormat: 'JUnit'
+          testResultsFiles: 'result.xml'    
+
 #     - task: TerraformTask@5
 #       inputs:
 #         provider: 'azurerm'
