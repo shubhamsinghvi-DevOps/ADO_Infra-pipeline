@@ -9,3 +9,11 @@ test_rg_module = {
         location = "Eastus"
     }
 }
+
+test_stg_module= {
+    storageaccount= {
+        name = "stgpractic8696"
+        resource-group-name ="ShubhamRGGithub_prod2"
+        location = "Eastus"
+    }
+}

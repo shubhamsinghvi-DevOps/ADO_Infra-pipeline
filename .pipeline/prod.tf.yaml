@@ -16,6 +16,6 @@ trigger:
 - main
 
 stages:
-- template: template.yaml
+- template: security_tool.yaml
   parameters: 
     env: prod
