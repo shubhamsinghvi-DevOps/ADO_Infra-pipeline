@@ -1,0 +1,21 @@
+pool: ADO_Github_Infra
+
+trigger: none
+
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+
+t
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)//Environment/Test'
+    backendAzureRmUseEntraIdForAuthentication: false
+    backendServiceArm: 'Azure_Github_Resources'
+    backendAzureRmOverrideSubscriptionID: '6b38de24-6577-4220-8a9e-3ddcaa335ffc'
+    backendAzureRmResourceGroupName: 'RG_Practice1'
+    backendAzureRmStorageAccountName: 'shubhamsinghvi4034241'
+    backendAzureRmContainerName: 'adocontainer'
+    backendAzureRmKey: 'terraform.tfstate'
