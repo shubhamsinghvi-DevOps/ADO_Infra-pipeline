@@ -12,8 +12,8 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/Test'
     backendServiceArm: 'ADO_Infra'
     backendAzureRmResourceGroupName: 'RG_Practice1'
-    backendAzureRmStorageAccountName: 'shubhamsinghvi4034241'
-    backendAzureRmContainerName: 'adocontainer'
+    backendAzureRmStorageAccountName: 'shubhamsinghvi40342411'
+    backendAzureRmContainerName: 'finaltest'
     backendAzureRmKey: 'terraform.tfstate'
 
 - task: TerraformTask@5
